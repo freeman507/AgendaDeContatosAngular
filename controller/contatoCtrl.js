@@ -1,7 +1,12 @@
 function contatoCtrl() {
     var dao = new contatoDAO();
-    this.salvarContato = function(contato) {
+    var contato = new contato();
+    this.salvarContato = function(nome, telefone, endereco) {
+        contato.setNome(nome);
+        contato.setTelefone(telefone);
+        contato.setEndereco(endereco);
         dao.salvarContato(contato);
+        contato = null;
     }
     this.imprimirContatos = function() {
         var contatos = dao.buscarTodosContatos();
@@ -21,5 +26,8 @@ function contatoCtrl() {
     }
     this.deletarContato = function(nome) {
         dao.deletarContato(nome);
+    }
+    this.buscarTodosContatos = function() {
+        return dao.buscarTodosContatos();
     }
 }
