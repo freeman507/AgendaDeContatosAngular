@@ -19,4 +19,7 @@ function contatoCtrl() {
     this.atualizarContato = function(contato) {
         dao.atualizarContato(contato);
     }
+    this.deletarContato = function(nome) {
+        dao.deletarContato(nome);
+    }
 }

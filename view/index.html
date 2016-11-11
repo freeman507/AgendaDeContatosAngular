@@ -38,6 +38,19 @@
             contato4.setEndereco("Rua Souza Naves");
             contatoCtrl.salvarContato(contato4);
             console.log("contatos:");
+
+            contatoCtrl.imprimirContatos();
+
+            var contato = new contato();
+            contato.setNome("Felipe2");
+            contato.setTelefone("88888888");
+            contato.setEndereco(null);
+            contatoCtrl.atualizarContato(contato);
+
+            contatoCtrl.imprimirContatos();
+
+            contatoCtrl.deletarContato("Felipe2");
+
             contatoCtrl.imprimirContatos();
         </script>
     </body>
