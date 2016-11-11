@@ -1,4 +1,4 @@
-function contato() {
+function Contato() {
     var nome;
     var telefone;
     var endereco;

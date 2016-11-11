@@ -7,7 +7,7 @@ function contatoDAO() {
         return contatos;
     }
     this.buscarContatoPorNome = function(nome) {
-        for (var i = 0; i < contatos.length - 1; i++) {
+        for (var i = 0; i < contatos.length; i++) {
             var contato = contatos[i];
             if (contato.getNome() === nome) {
                 return contato;
@@ -16,7 +16,7 @@ function contatoDAO() {
         return null;
     }
     this.atualizarContato = function(contato) {
-        for (var i = 0; i < contatos.length - 1; i++) {
+        for (var i = 0; i < contatos.length; i++) {
             if (contatos[i].getNome() === contato.getNome()) {
                 contatos[i] = contato;
             }
@@ -24,7 +24,7 @@ function contatoDAO() {
         return null;
     }
     this.deletarContato = function(nome) {
-        for (var i = 0; i < contatos.length - 1; i++) {
+        for (var i = 0; i < contatos.length; i++) {
             var contato = contatos[i];
             if (contato.getNome() === nome) {
                 contatos.splice(i, 1);
